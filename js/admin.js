@@ -3,7 +3,10 @@
 function onInitAdmin() {
       var logedInUser = loadFromStorage('logedInUser')
 
-      if (!logedInUser || !logedInUser.isAdmin) goToLoginPage()
+      if (!logedInUser || !logedInUser.isAdmin) {
+            removeFromStorage('logedInUser')
+            goToLoginPage()
+      }
       renderTable()
 }
 
@@ -16,7 +19,7 @@ function renderTable() {
 
       var strHtml =
 
-      `<tr>
+            `<tr>
       <th>${keys[0]}</th>
       <th>${keys[1]}</th>
       <th>${keys[2]}</th>
@@ -25,7 +28,7 @@ function renderTable() {
       </tr>`
 
       strHtml += gUsers.map((user) => {
-      return `<tr>
+            return `<tr>
       <td>${user.id}</td>
       <td>${user.username}</td>
       <td>${user.password}</td>
@@ -35,5 +38,13 @@ function renderTable() {
       }).join('')
 
       elTable.innerHTML = strHtml
-console.log('strHtml', strHtml)
 }
+
+
+function onSetSortBy(elSelect) {
+      setSortBy(elSelect.value)
+      renderTable()
+}
+
+
+

@@ -39,12 +39,11 @@ button:hover {
       display: none;
 }
 
-.admin-btn{
+.admin-btn {
       display: inline-block;
 }
 
-table{
+table {
       background-color: rgb(154, 154, 220);
       border: 1px solid grey;
 }
-

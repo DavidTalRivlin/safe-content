@@ -1,8 +1,14 @@
 'use strict'
 
 function onInit() {
-      clearStorage()
-      
+      var logedInUser = loadFromStorage('logedInUser')
+
+      if (logedInUser && logedInUser.isAdmin) {
+            toggleDisplayLogIn()
+            toggleDispaySecretContent()
+      }
+
+
 }
 
 function checkLogin(ev) {
@@ -37,7 +43,6 @@ function checkLogin(ev) {
 function toggleDisplayLogIn() {
       var elLogIn = document.querySelector('.log-in-area')
       elLogIn.classList.toggle('hidden')
-
 }
 
 function toggleDispaySecretContent() {
@@ -50,7 +55,6 @@ function logOut() {
       removeFromStorage('logedInUser')
       toggleDispaySecretContent()
       toggleDisplayLogIn()
-
 }
 
 function toggleAdminBtn(isAdmin) {
@@ -58,17 +62,18 @@ function toggleAdminBtn(isAdmin) {
 
       if (isAdmin) {
             elAdminBtn.style.display = ('inline-block')
-
       } else {
             elAdminBtn.style.display = ('none')
-
       }
 }
 
-function goToAdminPage(){
+function goToAdminPage() {
       window.location = 'admin.html'
 }
 
-function goToLoginPage(){
+function goToLoginPage() {
       window.location = 'index.html'
 }
+
+
+

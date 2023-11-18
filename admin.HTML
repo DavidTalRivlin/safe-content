@@ -10,10 +10,22 @@
 </head>
 
 <body onload="onInitAdmin()">
+      <section class="sort">
+
+            <label>Sort by:</label>
+            <select onchange="onSetSortBy(this)">
+                  <option value="username">User Name</option>
+                  <option value="lastLoginTime">Last login</option>
+
+            </select>
+      </section>
+
       <table class="users-table">
       </table>
 
       <button onclick="logOut()">log out</button>
+
+      <button onclick="history.back()">back</button>
 
 </body>
 
