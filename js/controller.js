@@ -19,9 +19,9 @@ function checkLogin(ev) {
             toggleDispaySecretContent()
             toggleAdminBtn(LogedInUser.isAdmin)
 
-            
+
       }
-      
+
       var elUsernameInput = document.querySelector('#username')
       elUsernameInput.value = ''
       var elpasswordInput = document.querySelector('#password')
@@ -43,20 +43,26 @@ function toggleDispaySecretContent() {
       elSecretIn.classList.toggle('hidden')
 }
 
-function logOut(){
+function logOut() {
+      window.location = 'index.html'
       removeFromStorage('logedInUser')
       toggleDispaySecretContent()
       toggleDisplayLogIn()
 
 }
 
-function toggleAdminBtn(isAdmin){
-var elAdminBtn = document.querySelector('.admin-btn')
+function toggleAdminBtn(isAdmin) {
+      var elAdminBtn = document.querySelector('.admin-btn')
 
-if (isAdmin) {elAdminBtn.style.display = ('inline-block')
-      
-}else{
-      elAdminBtn.style.display =    ('none')
+      if (isAdmin) {
+            elAdminBtn.style.display = ('inline-block')
 
+      } else {
+            elAdminBtn.style.display = ('none')
+
+      }
 }
+
+function goToAdminPage(){
+      window.location = 'admin.html'
 }
