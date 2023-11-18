@@ -2,6 +2,7 @@
 
 function onInit() {
       clearStorage()
+      
 }
 
 function checkLogin(ev) {
@@ -11,13 +12,14 @@ function checkLogin(ev) {
       var username = ev.target[0].value
       var password = ev.target[1].value
 
-      var LogedInUser = gUsers.find((user) => user.username.toString() === username && user.password.toString() === password)
-      if (LogedInUser) {
+      var logedInUser = gUsers.find((user) => user.username.toString() === username && user.password.toString() === password)
+      if (logedInUser) {
 
-            saveToStorage('logedInUser', LogedInUser)
+            logedInUser.lastLoginTime = Date.now()
+            saveToStorage('logedInUser', logedInUser)
             toggleDisplayLogIn()
             toggleDispaySecretContent()
-            toggleAdminBtn(LogedInUser.isAdmin)
+            toggleAdminBtn(logedInUser.isAdmin)
 
 
       }
@@ -44,7 +46,7 @@ function toggleDispaySecretContent() {
 }
 
 function logOut() {
-      window.location = 'index.html'
+      goToLoginPage()
       removeFromStorage('logedInUser')
       toggleDispaySecretContent()
       toggleDisplayLogIn()
@@ -65,4 +67,8 @@ function toggleAdminBtn(isAdmin) {
 
 function goToAdminPage(){
       window.location = 'admin.html'
+}
+
+function goToLoginPage(){
+      window.location = 'index.html'
 }
