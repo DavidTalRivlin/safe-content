@@ -2,9 +2,17 @@
 function saveToStorage(key, value) {
       const strVal = JSON.stringify(value)
       localStorage.setItem(key, strVal)
-  }
-  
-  function loadFromStorage(key) {
+}
+
+function removeFromStorage(key) {
+      localStorage.removeItem(key)
+}
+
+function loadFromStorage(key) {
       var strVal = localStorage.getItem(key)
       return JSON.parse(strVal)
-  }
+}
+
+function clearStorage() {
+      localStorage.clear()
+}

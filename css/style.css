@@ -1,23 +1,23 @@
-*{
-text-align: center;
-font-family: 'Courier New', Courier, monospace;
+* {
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
 }
 
 
-.lock-img{
-      width: 20vw;   
+.lock-img {
+      width: 20vw;
 }
 
 
-.log-in-btn{
+.log-in-btn {
       margin-top: 15px;
       background-color: rgb(43, 226, 43);
-      cursor: pointer; 
-      
+      cursor: pointer;
+
 }
 
-.log-in-btn:hover{
-      filter: brightness(75%);   
+.log-in-btn:hover {
+      filter: brightness(75%);
 }
 
 
@@ -25,3 +25,7 @@ font-family: 'Courier New', Courier, monospace;
       margin: 5px;
 }
 
+
+.hidden {
+      display: none;
+}

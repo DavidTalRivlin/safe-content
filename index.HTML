@@ -6,27 +6,45 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <link rel="stylesheet" href="css/style.css">
-      
+
 </head>
 
 <body onload="onInit()">
 
-      <h1> Sign In! </h1>
-      <img class="lock-img" src="img/pngwing2.png" alt="locked lock" >
+      <div class="log-in-area">
+            <h1> Sign In! </h1>
+            <img class="lock-img" src="img/pngwing2.png" alt="locked lock">
 
-      <form onsubmit="checkLogin(event)" class="check-login"">
-            <div class="username-area">
-                  <label for="username">Username</label>
-                  <input id="username" type="text" placeholder="Enter Username" autocomplete="false">
-            </div>
-            <div class="password-area">
-                  <label for="password">Password</label>
-                  <input id="password" type="text" placeholder="Enter Password" autocomplete="false">
+            <form onsubmit="checkLogin(event)" class="check-login">
+                  <div class=" username-area">
+                        <label for="username">Username</label>
+                        <input id="username" type="text" placeholder="Enter Username" autocomplete="false">
+
+                        <div class="password-area">
+                              <label for="password">Password</label>
+                              <input id="password" type="text" placeholder="Enter Password" autocomplete="false">
+                        </div>
+                        <div>
+                              <button type="submit" class="log-in-btn">Login</button>
+                        </div>
+                  </div>
+            </form>
+      </div>
+
+      <div class="secret-content hidden">
+            <h1>welcome back <span>username</span></h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y8mWhEURb7c?si=F5Zjlk2JvmvGfplE"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+
+            <div>
+                  <button onclick="logOut()"  >log out</button>
             </div>
             <div>
-                  <button type="submit" class="log-in-btn">Login</button>
+                  <button>admin</button>
             </div>
-      </form>
+      </div>
 
 </body>
 
