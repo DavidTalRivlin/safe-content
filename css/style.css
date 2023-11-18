@@ -1,0 +1,27 @@
+*{
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+}
+
+
+.lock-img{
+      width: 20vw;   
+}
+
+
+.log-in-btn{
+      margin-top: 15px;
+      background-color: rgb(43, 226, 43);
+      cursor: pointer; 
+      
+}
+
+.log-in-btn:hover{
+      filter: brightness(75%);   
+}
+
+
+.username-area {
+      margin: 5px;
+}
+
