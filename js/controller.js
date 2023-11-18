@@ -19,6 +19,12 @@ function checkLogin(ev) {
             toggleDispaySecretContent()
       }
       
+      var elUsernameInput = document.querySelector('#username')
+      elUsernameInput.value = ''
+      var elpasswordInput = document.querySelector('#password')
+      elpasswordInput.value = ''
+
+
 }
 
 function toggleDisplayLogIn() {
