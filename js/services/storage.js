@@ -16,3 +16,4 @@ function loadFromStorage(key) {
 function clearStorage() {
       localStorage.clear()
 }
+

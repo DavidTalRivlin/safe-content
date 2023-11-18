@@ -17,12 +17,17 @@ function checkLogin(ev) {
             saveToStorage('logedInUser', LogedInUser)
             toggleDisplayLogIn()
             toggleDispaySecretContent()
+            toggleAdminBtn(LogedInUser.isAdmin)
+
+            
       }
       
       var elUsernameInput = document.querySelector('#username')
       elUsernameInput.value = ''
       var elpasswordInput = document.querySelector('#password')
       elpasswordInput.value = ''
+
+
 
 
 }
@@ -43,4 +48,15 @@ function logOut(){
       toggleDispaySecretContent()
       toggleDisplayLogIn()
 
+}
+
+function toggleAdminBtn(isAdmin){
+var elAdminBtn = document.querySelector('.admin-btn')
+
+if (isAdmin) {elAdminBtn.style.display = ('inline-block')
+      
+}else{
+      elAdminBtn.style.display =    ('none')
+
+}
 }

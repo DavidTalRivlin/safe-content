@@ -3,6 +3,15 @@
       font-family: 'Courier New', Courier, monospace;
 }
 
+button {
+      background-color: red;
+      margin-top: 10px;
+      cursor: pointer;
+}
+
+button:hover {
+      filter: brightness(75%);
+}
 
 .lock-img {
       width: 20vw;
@@ -29,3 +38,9 @@
 .hidden {
       display: none;
 }
+
+.admin-btn{
+      display: inline-block;
+}
+
+

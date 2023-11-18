@@ -10,7 +10,7 @@ const gUsers = [
       username: 'puki',
       password: 'secret1',
       lastLoginTime: 1601891998864,
-      isAdmin: false
+      isAdmin: true
 }, 
 {
       id: 'u102',
